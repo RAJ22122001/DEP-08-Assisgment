@@ -8,6 +8,11 @@ function find(sent){
    myset.add('i');
    myset.add('o');
    myset.add('u');
+   myset.add('E');
+   myset.add('A');
+   myset.add('I');
+   myset.add('O');
+   myset.add('U');
    console.log(myset);
    let count=0;
    let ans='';
