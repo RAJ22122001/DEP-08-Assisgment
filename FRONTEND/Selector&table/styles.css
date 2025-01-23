@@ -1,0 +1,66 @@
+/* Type selector */
+ 
+  td{
+    font-weight:bold;
+    color:gray;
+  }
+  th{
+    color:brown;
+  }
+  /* class Selctor*/
+  .raj_name{
+    color:blue;
+  }
+  /* id selctor*/
+  #sr2{
+    color:pink;  /* we set id same both for serial no 2 and 3 but although color is
+    showing in both but when we inspect then only last id is only debugg free*/
+  }
+  /*attribute selector*/
+  input[name="name2"]{
+         background-color: aqua;
+         width:150px;
+  }
+  /*psdeue class Selector*/
+ input:hover{
+    background-color: yellow;
+ }
+ input:active{
+    background-color: blueviolet;
+ }
+ /*psedu-element Selector*/
+
+ input::first-line{
+    background-color: brown;
+ }
+ /* dESECNDENT sELCTOR*/
+ .desecentsel{
+    display: flex;
+    flex-direction: column;
+ }
+
+ /* child Selector*/
+ tr >td{
+    color:blanchedalmond;
+  }
+  /* universal Selector*/
+  *{
+    padding:0;
+    margin:0;
+  }
+  /* combinator selector/
+   /* child combinator*/
+   .container > .wrapper {
+    color: aqua;
+}
+/* general sibling */
+.header + .wrapper {
+    color: blue;
+}
+.header ~p{
+   color:green;
+}
+
+.contianer >.wrapper ~p{
+    color:aqua
+}
