@@ -1,5 +1,5 @@
 function find_longest(sent){
-    let words =sent.split(' ');
+    let distructure=sent.split(/[^a-zA-Z]+/);
     console.log(words);
     let longestword='';
     for(let word of words){

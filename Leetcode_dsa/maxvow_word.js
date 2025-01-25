@@ -1,6 +1,6 @@
 
 function find(sent){
-    let distructure=sent.split(' ');
+    let distructure=sent.split(/[^a-zA-Z]+/);
     console.log(distructure);
    const myset=new Set();
    myset.add('e');
