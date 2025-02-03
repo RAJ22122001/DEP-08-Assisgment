@@ -1,0 +1,36 @@
+var isPalindrome = function(s) {
+    function checkNumber(ch) {
+        return ch >= '0' && ch <= '9';
+    }
+
+    function isLower(ch) {
+        return ch >= 'a' && ch <= 'z';
+    }
+
+    function isUpper(ch) {
+        return ch >= 'A' && ch <= 'Z';
+    }
+
+    let i = 0;
+    let j = s.length - 1;
+    while (i < j) {
+        if (!checkNumber(s[i]) && !isLower(s[i]) && !isUpper(s[i])) {
+            i++;
+        } else if (!checkNumber(s[j]) && !isLower(s[j]) && !isUpper(s[j])) {
+            j--;
+        } else {
+            if (isUpper(s[i])) {
+                s = s.substring(0, i) + s[i].toLowerCase() + s.substring(i + 1);
+            }
+            if (isUpper(s[j])) {
+                s = s.substring(0, j) + s[j].toLowerCase() + s.substring(j + 1);
+            }
+            if (s[i] !== s[j]) {
+                return false;
+            }
+            i++;
+            j--;
+        }
+    }
+    return true;
+};
