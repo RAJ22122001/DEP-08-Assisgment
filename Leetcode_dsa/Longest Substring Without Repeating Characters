@@ -1,0 +1,30 @@
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var lengthOfLongestSubstring = function(s) {
+    const map= new Map();
+     let j=0;
+     let i=0;
+     let ans=0;
+     const n=s.length;
+     while(i<n){
+        
+      let ch=s[i];
+      while(j<n&&map.has(ch)){
+        map.set(s[j],map.get(s[j])-1);
+        if(map.get(s[j])==0){
+            map.delete(s[j]);
+        }
+       
+        j++;
+        
+      }
+      map.set(ch,1);
+      ans=Math.max(ans,i-j+1);
+      i++;
+
+     }
+     return ans;
+
+};
