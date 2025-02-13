@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 20px;
+}
+
+ul#sports {
+   
+    padding: 0;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+ul#sports li {
+    border: 1px solid #333;
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+ul#sports li:hover {
+    background-color: #e0f7fa;
+}
